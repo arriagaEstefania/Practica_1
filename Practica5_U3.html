@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica5_U3 - Validacion de formulario</title>
+    <script type="text/javascript" languaje="javascript">
+        function checkForm(){
+            var valid = true;
+            if(document.mainForm.firstName.value == "" && document.mainForm.lastName.value == "")
+            {
+                alert("Please teclea tu primer Nombre!");
+                document.getElementById("firstNameError").style.display = "inline";
+                valid = false;
+            }
+            else(document.mainForm.lastName.value == "")
+            {
+                alert("Please teclea tu Apellido!");
+                document.getElementById("lastNameError").style.display = "inline";
+                valid = false;
+            }
+            return valid;
+        }
+    </script>
+</head>
+<body>
+    <form action="" name="mainForm">
+        <label for="fname">First Name</label>
+        <input type="text" name="firstName"/>
+        <br />
+        <br />
+        <label for="fname">Last Name</label>
+        <input type="text" name="lastName"/>
+        <input type="button" value="Validacion" onclick="javascript:checkForm()"/>
+    </form>
+</body>
+</html>
